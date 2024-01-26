@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order-Details</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<!-- bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<!-- style -->
+<link rel="stylesheet" href="admin.css"> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+<body>
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg navbar-dark dash">
+          <div class="container-fluid flex-lg-column px-4 px-lg-0">
+           <a class="navbar-brand mx-lg-auto mb-lg-4" href="#">
+           <span class="h3 fw-bold d-flex d-lg-none small-logo align-items-center">
+            <img src="images/logo.png" alt=""></span>
+            </a>
+              <button class="navbar-toggler mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+             <ul class="navbar-nav ms-auto flex-lg-column">
+              <li class="align-items-center ms-4 d-none d-lg-flex">
+                  <a class="nav-link" href="landing.html"><img src="images/logo.png" alt=""></a>
+              </li>
+              <li class="nav-item  first-nav-item" onclick="setActive(this)">
+              <img src="images/dashboard-icon.svg" alt="">
+              <a class="nav-link " href="admin-dashboard.html">Dashboard</a>
+              </li>
+              <li class="nav-item active" onclick="setActive(this)">
+              <img src="images/order-icon.svg" alt="">
+              <a class="nav-link" href="admin-orders.html">Orders</a>
+              </li>
+              <li class="nav-item " onclick="setActive(this)">
+             <img src="images/User_fill.svg" alt="">
+              <a class="nav-link " href="admin-users.html">Users</a>
+              </li>
+               <li class="nav-item " onclick="setActive(this)">
+               <img src="images/Box_alt_fill.svg" alt="">
+               <a class="nav-link" href="products.html">Products</a>
+             </li>
+               <li class="nav-item" onclick="setActive(this)">
+              <img src="images/Setting_alt_fill.svg" alt="">
+                <a class="nav-link" href="settings.html">Settings</a>
+               </li>
+               </ul>
+             </div>
+          </div>
+          </nav>
+    <div id="content-wrapper"  >
+        <!-- header -->
+        <div class="header-wrapper">
+           <header>
+        <div class="part2">
+           <span class="active-label">
+            <img src="images/Setting_fill.svg" alt="">
+            
+           </span>
+          <a href="" class="active-admin"><img src="images/johny.svg" alt=""></a>
+          
+          <span class="johny">Johnny Harris <br>
+            <a href="">Log out</a></span>
+          </div>
+           </header>
+       </div>
+    <div class="container">
+     <a href="products.html">   <span><img src="images/Arrow_alt_left.svg" alt="">Back to Orders</span></a>
+        <h5 class="tag">Order #1253</h5>
+        <div class="admin-top-wrapper container">
+            <div class="admin-top">
+          
+              <div class="total-orders ">
+                    <div class="data1">
+                <div class="square  square2"></div>
+                <div class="text">
+               <span class="num">$50.00</span> <br>
+                <span class="sub">Invoiced</span>
+                </div>
+                 </div>
+              </div>
+              <div class="total-revenue">
+                    <div class="data1">
+                <div class="square square2"></div>
+                <div class="text">
+               <span class="num">Paid</span> <br>
+                <span class="sub">Status</span>
+                </div>
+                 </div>
+              </div>
+              <div class="paid-ratio">
+                    <div class="data1">
+                <div class="square square3"></div>
+                <div class="text">
+               <span class="num">Not Fulfilled</span> <br>
+                <span class="sub">Delivery</span>
+                </div>
+                 </div>
+              </div>
+             </div>
+           </div>
+<div class="colorful-btns">
+    <button class="paid">Mark as Paid</button>
+    <button class="fulfil">Mark as Fulfilled</button>
+    <button class="invoice">Resend Invoice</button>
+</div>
+
+</div>
+<div class="order-detail container">
+<div class="part1">
+<div>   
+     <span class="main">Cool Coder</span> <br>
+    <span class="sub">Username</span></div>
+<div>
+    <span class="main">$50.00</span> <br>
+    <span class="sub">Total amount</span></div> 
+</div> 
+<div class="part1">
+<div>   
+     <span class="main">John Cena</span> 
+     <br> <br>
+     <span class="small">Pablo Alto, San Francisco, CA <br>92102, United States of America</span> <br>
+    <span class="sub">Billing Address</span></div>
+<div>
+    <span class="main">#1253</span> <br>
+    <span class="sub">Invoice</span></div> 
+</div> 
+<div class="part1 part3">
+<div>   
+     <span class="main">johncena@gmail.com</span> <br>
+    <span class="sub">E-mail Address</span></div>
+<div>
+    <span class="main">19/11/2023</span> <br>
+    <span class="sub">Date of Purchase</span></div> 
+</div> 
+<div class="part1 mobile-proxy">
+    <div class="data1">
+      <div class="square  square2"></div>
+     <div class="text">
+    <span class="main">Mobile Proxy</span>
+    </div>
+    </div>
+<span class="main">5GB</span>
+<span class="main">29 Aug 2023</span>
+<span>$52.36</span>
+
+</div>
+<div class="part-last second-last">
+     <span class="sub">taxes</span>
+    <span class="main">$1.70</span>
+    </div>
+<div class="part-last">
+    <span class="sub">Grand Total</span>
+    <span class="main">$54.06</span></div> 
+</div> 
+    <footer>
+    <div class="container">
+      <div class="row ">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-6">
+          <a class="logo">DevCa</a> <br>
+          <span>All rights reserved</span>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-6">
+          <h5>Resources</h5> 
+          <a href="">Resources1</a> <br>
+          <a href="">Resources1</a> <br>
+          <a href="">Resources1</a> <br>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-6 ">
+          <h5>Company</h5>
+          <a href="">Company1</a> <br>
+          <a href="">Company1</a> <br>
+          <a href="">Company1</a> <br>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-6">
+          <h5>Socials</h5>
+          <a href="">Company1</a> <br>
+          <a href="">Company1</a> <br>
+          <a href="">Company1</a> <br> 
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-5 col-5 part4">
+          <div class="img"><img src="images/send.svg" alt=""></div>
+          <div class="img"><img src="images/send.svg" alt=""></div>
+          <div class="img"><img src="images/send.svg" alt=""></div>
+          <div class="img"><img src="images/send.svg" alt=""></div>
+          </div>
+      </div>
+    </div>
+</footer>
+    </div>
+
+<!-- bootstrap -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+     </body>
+    </html>

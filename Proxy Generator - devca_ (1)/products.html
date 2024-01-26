@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<!-- style -->
+<link rel="stylesheet" href="admin.css"> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+<body>
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg navbar-dark dash">
+          <div class="container-fluid flex-lg-column px-4 px-lg-0">
+           <a class="navbar-brand mx-lg-auto mb-lg-4" href="#">
+           <span class="h3 fw-bold d-flex d-lg-none small-logo align-items-center">
+            <img src="images/logo.png" alt=""></span>
+            </a>
+              <button class="navbar-toggler mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+             <ul class="navbar-nav ms-auto flex-lg-column">
+              <li class="align-items-center ms-4 d-none d-lg-flex">
+                  <a class="nav-link" href="landing.html"><img src="images/logo.png" alt=""></a>
+              </li>
+              <li class="nav-item  first-nav-item" onclick="setActive(this)">
+              <img src="images/dashboard-icon.svg" alt="">
+              <a class="nav-link " href="admin-dashboard.html">Dashboard</a>
+              </li>
+              <li class="nav-item " onclick="setActive(this)">
+              <img src="images/order-icon.svg" alt="">
+              <a class="nav-link" href="admin-orders.html">Orders</a>
+              </li>
+              <li class="nav-item " onclick="setActive(this)">
+             <img src="images/User_fill.svg" alt="">
+              <a class="nav-link " href="admin-users.html">Users</a>
+              </li>
+               <li class="nav-item active" onclick="setActive(this)">
+               <img src="images/Box_alt_fill.svg" alt="">
+               <a class="nav-link" href="products.html">Products</a>
+             </li>
+               <li class="nav-item" onclick="setActive(this)">
+              <img src="images/Setting_alt_fill.svg" alt="">
+                <a class="nav-link" href="settings.html">Settings</a>
+               </li>
+               </ul>
+             </div>
+          </div>
+          </nav>
+    <div id="content-wrapper"  >
+        <!-- header -->
+        <div class="header-wrapper">
+           <header>
+        <div class="part2">
+           <span class="active-label">
+            <img src="images/Setting_fill.svg" alt="">
+            
+           </span>
+          <a href="" class="active-admin"><img src="images/johny.svg" alt=""></a>
+          
+          <span class="johny">Johnny Harris <br>
+            <a href="">Log out</a></span>
+          </div>
+           </header>
+       </div>
+
+<div class="product-top container">
+    <div class="product-top1">
+        <h5 class="tag container">Users</h5>
+        <div class="admin-top-wrapper container">
+         <div class="admin-top">
+       
+           <div class="total-orders">
+                 <div class="data1">
+             <div class="square square2"></div>
+             <div class="text">
+            <span class="num">500</span> <br>
+             <span class="sub">Total Users</span>
+             </div>
+              </div>
+           </div>
+           <div class="total-revenue">
+                 <div class="data1">
+             <div class="square square2"></div>
+             <div class="text">
+            <span class="num">$500</span> <br>
+             <span class="sub">Total Balance</span>
+             </div>
+              </div>
+           </div>
+        
+          </div>
+        </div>
+     </div>
+    <div class="product-top2">
+         <h5 class="tag container">Users</h5>
+     <div class="admin-top-wrapper container">
+        <div class="admin-top">
+            <div class="paid-ratio">
+                <div class="data1">
+            <div class="square "></div>
+            <div class="text">
+              <img src="images/datacenter.svg" alt="">
+           <span class="datacenter-8gb num">Datacenter - 8 GB</span> <br>
+            <span class="sub">Most Popular Product</span>
+            </div>
+             </div>
+          </div>
+        </div>
+     </div>
+    </div>
+</div>
+ <h5 class="tag container">All Users</h5>
+       <div class="admin-main container">
+        <div class="table-wrapper">
+         <table >
+           <tr>
+            <th></th>
+             <th id="openPopupButton1"><div  class="inputs">Product <img src="images/Path.svg" alt=""></div> </th>
+             <th id="openPopupButton2" ><div  class="inputs"> Category <img src="images/Path.svg" alt=""></div></th>
+             <th id="openPopupButton3" ><div  class="inputs">Payload<img src="images/Path.svg" alt=""></div></th>
+             <th id="openPopupButton4" ><div  class="inputs">Endpoint<img src="images/Path.svg" alt=""></div></th>
+             <th id="openPopupButton5" ><div  class="inputs">Price<img src="images/Path.svg" alt=""></div></th>
+             <th id="openPopupButton6" ><div  class="inputs">Created<img src="images/Path.svg" alt=""></div></th>
+             <th><img src="images/Search.svg" alt=""></th>
+           </tr>
+           <!-- 1 -->
+           <tr>
+             <td><i class="fa-solid fa-check"></i></td>
+             <td class="lightfont "><a href="product-detail.html">Residential 5GB</a></td>
+             <td class="status-res status">Residential</td>
+           <td class="lightfont">payload.example</td>
+           <td class="lightfont">endpoint.example </td>
+           <td class="lightfont">$500 </td>
+           <td class="lightfont">29 November 2023</td>
+           <td class="smallfont hover-container"><span class="initial-text"><img src="images/Menu.svg" alt=""></span>
+            <span class="hover-text">Options</span> </td>
+           </tr>
+           <!-- 1 -->
+           <tr>
+            <td><i class="fa-solid fa-check"></i></td>
+            <td class="lightfont"><a href="product-detail.html">DataCenter 2GB </a></td>
+            <td class="status-datacenter status">Datacenter</td>
+          <td class="lightfont">endpoint.example</td>
+          <td class="lightfont">endpoint.example </td>
+          <td class="lightfont">$500 </td>
+          <td class="lightfont">29 November 2023</td>
+          <td class="smallfont hover-container"><span class="initial-text"><img src="images/Menu.svg" alt=""></span>
+           <span class="hover-text">Options</span> </td>
+          </tr>
+                     <!-- 1 -->
+           <tr>
+             <td><i class="fa-solid fa-check"></i></td>
+             <td class="lightfont"><a href="product-detail.html">Mobile 5GB</a></td>
+             <td class="status-admin status">Residential</td>
+           <td class="lightfont">endpoint.example</td>
+           <td class="lightfont">endpoint.example </td>
+           <td class="lightfont">$500 </td>
+           <td class="lightfont">29 November 2023</td>
+           <td class="smallfont hover-container"><span class="initial-text"><img src="images/Menu.svg" alt=""></span>
+            <span class="hover-text">Options</span> </td>
+           </tr>
+         </table>
+        </div>
+        </div>
+       <footer>
+        <div class="container">
+          <div class="row ">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-6">
+              <a class="logo">DevCa</a> <br>
+              <span>All rights reserved</span>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-6">
+              <h5>Resources</h5> 
+              <a href="">Resources1</a> <br>
+              <a href="">Resources1</a> <br>
+              <a href="">Resources1</a> <br>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-6 ">
+              <h5>Company</h5>
+              <a href="">Company1</a> <br>
+              <a href="">Company1</a> <br>
+              <a href="">Company1</a> <br>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-6">
+              <h5>Socials</h5>
+              <a href="">Company1</a> <br>
+              <a href="">Company1</a> <br>
+              <a href="">Company1</a> <br> 
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-5 col-5 part4">
+              <div class="img"><img src="images/send.svg" alt=""></div>
+              <div class="img"><img src="images/send.svg" alt=""></div>
+              <div class="img"><img src="images/send.svg" alt=""></div>
+              <div class="img"><img src="images/send.svg" alt=""></div>
+              </div>
+          </div>
+        </div>
+    </footer>
+    </div>
+    <div class="popup1">
+      <div class="popup-content1">
+<label class="pop"> <a href="">User ID</a>
+  <input type="radio" checked="checked" name="radio">
+  <span class="checkmark"></span>
+</label>
+        <label class="pop"><a href="">Order Paid</a>
+          <input type="radio" checked="checked" name="radio">
+          <span class="checkmark"></span>
+        </label>
+        <label class="pop"><a href="">Order Fulfilled</a>
+          <input type="radio" name="radio">
+          <span class="checkmark"></span>
+        </label>
+        <label class="pop"><a href="">Active Order</a>
+          <input type="radio" name="radio">
+          <span class="checkmark"></span>
+        </label>
+        <label class="pop"><a href="">Last Completed Order</a>
+          <input type="radio" name="radio">
+          <span class="checkmark"></span>
+        </label>
+        
+      </div>
+    </div>
+    <div class="popup2">
+        <div class="popup-content2">
+  <label class="pop"> <a href="">User ID</a>
+    <input type="radio" checked="checked" name="radio">
+    <span class="checkmark"></span>
+  </label>
+          <label class="pop"><a href="">Order Paid</a>
+            <input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="pop"><a href="">Order Fulfilled</a>
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="pop"><a href="">Active Order</a>
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="pop"><a href="">Last Completed Order</a>
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          
+        </div>
+      </div>
+      <div class="popup3">
+        <div class="popup-content3">
+  <label class="pop"> <a href="">User ID</a>
+    <input type="radio" checked="checked" name="radio">
+    <span class="checkmark"></span>
+  </label>
+          <label class="pop"><a href="">Order Paid</a>
+            <input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="pop"><a href="">Order Fulfilled</a>
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="pop"><a href="">Active Order</a>
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="pop"><a href="">Last Completed Order</a>
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          
+        </div>
+      </div>
+      <div class="popup4">
+        <div class="popup-content4">
+  <label class="pop"> <a href="">User ID</a>
+    <input type="radio" checked="checked" name="radio">
+    <span class="checkmark"></span>
+  </label>
+          <label class="pop"><a href="">Order Paid</a>
+            <input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="pop"><a href="">Order Fulfilled</a>
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="pop"><a href="">Active Order</a>
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="pop"><a href="">Last Completed Order</a>
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          
+        </div>
+      </div>
+      <div class="popup5">
+        <div class="popup-content5">
+  <label class="pop"> <a href="">User ID</a>
+    <input type="radio" checked="checked" name="radio">
+    <span class="checkmark"></span>
+  </label>
+          <label class="pop"><a href="">Order Paid</a>
+            <input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="pop"><a href="">Order Fulfilled</a>
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="pop"><a href="">Active Order</a>
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="pop"><a href="">Last Completed Order</a>
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          
+        </div>
+      </div>      <div class="popup6">
+        <div class="popup-content6">
+  <label class="pop"> <a href="">User ID</a>
+    <input type="radio" checked="checked" name="radio">
+    <span class="checkmark"></span>
+  </label>
+          <label class="pop"><a href="">Order Paid</a>
+            <input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="pop"><a href="">Order Fulfilled</a>
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="pop"><a href="">Active Order</a>
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          <label class="pop"><a href="">Last Completed Order</a>
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+          </label>
+          
+        </div>
+      </div>
+    <script>
+  document.getElementById("openPopupButton1").addEventListener("click", function() {
+  document.querySelector(".popup1").style.display = "block";
+});
+document.getElementById("openPopupButton2").addEventListener("click", function() {
+  document.querySelector(".popup2").style.display = "block";
+});
+document.getElementById("openPopupButton3").addEventListener("click", function() {
+  document.querySelector(".popup3").style.display = "block";
+});
+document.getElementById("openPopupButton4").addEventListener("click", function() {
+  document.querySelector(".popup4").style.display = "block";
+});
+document.getElementById("openPopupButton5").addEventListener("click", function() {
+  document.querySelector(".popup5").style.display = "block";
+});
+document.getElementById("openPopupButton6").addEventListener("click", function() {
+  document.querySelector(".popup6").style.display = "block";
+});
+    </script>
+   <script src="graph.js"></script>
+<!-- bootstrap -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+     </body>
+    </html>
